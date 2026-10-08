@@ -1,13 +1,13 @@
 {
   "name": "@epicauth/seller-core",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Generated core client and types for the EpicAuth Seller API",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/EpicAuth/EpicAuth-Seller-Core.git"
+    "url": "git+https://github.com/EpicAuth/EpicAuth-Seller-Core.git"
   },
   "exports": {
     ".": {
