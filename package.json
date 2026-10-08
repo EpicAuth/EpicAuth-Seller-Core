@@ -1,0 +1,37 @@
+{
+  "name": "@epicauth/seller-core",
+  "version": "1.0.0",
+  "description": "Generated core client and types for the EpicAuth Seller API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EpicAuth/EpicAuth-Seller-Core.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "generate": "openapi-ts",
+    "prepublishOnly": "bun run build"
+  },
+  "private": false,
+  "license": "Elastic-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@hey-api/openapi-ts": "0.99.0",
+    "prettier": "^3.9.9",
+    "typescript": "^5.9.3"
+  }
+}
