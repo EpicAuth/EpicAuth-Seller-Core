@@ -1,6 +1,6 @@
 {
   "name": "@epicauth/seller-core",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Generated core client and types for the EpicAuth Seller API",
   "type": "module",
   "main": "./dist/index.js",
