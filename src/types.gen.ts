@@ -5554,14 +5554,9 @@ export type GetLicensesResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetLicensesResponse =
@@ -5591,8 +5586,7 @@ export type UpdateLicenseResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateLicenseResponse =
@@ -5641,10 +5635,6 @@ export type CreateLicenseResponses = {
         key: string;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
       }
@@ -5677,8 +5667,7 @@ export type VerifyLicenseResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type VerifyLicenseResponse =
@@ -5714,14 +5703,9 @@ export type GetLicenseInfoResponses = {
         creationdate: string;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetLicenseInfoResponse =
@@ -5747,14 +5731,9 @@ export type GetLicenseNoteResponses = {
         note: string | null;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetLicenseNoteResponse =
@@ -5783,8 +5762,7 @@ export type ExtendUnusedLicensesResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ExtendUnusedLicensesResponse =
@@ -5814,8 +5792,7 @@ export type ExtendAllLicensesResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ExtendAllLicensesResponse =
@@ -5844,8 +5821,7 @@ export type DeleteLicenseResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteLicenseResponse =
@@ -5873,8 +5849,7 @@ export type DeleteAllLicensesResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteAllLicensesResponse =
@@ -5903,8 +5878,7 @@ export type DeleteManyLicensesResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteManyLicensesResponse =
@@ -5932,8 +5906,7 @@ export type DeleteUnusedLicensesResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteUnusedLicensesResponse =
@@ -5961,8 +5934,7 @@ export type DeleteUsedLicensesResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteUsedLicensesResponse =
@@ -5993,8 +5965,7 @@ export type SubtractLicenseResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type SubtractLicenseResponse =
@@ -6024,8 +5995,7 @@ export type BanLicenseResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type BanLicenseResponse = BanLicenseResponses[keyof BanLicenseResponses];
@@ -6053,8 +6023,7 @@ export type UnbanLicenseResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UnbanLicenseResponse =
@@ -6083,8 +6052,7 @@ export type DeleteUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteUserResponse = DeleteUserResponses[keyof DeleteUserResponses];
@@ -6129,14 +6097,9 @@ export type GetUsersResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetUsersResponse = GetUsersResponses[keyof GetUsersResponses];
@@ -6168,8 +6131,7 @@ export type CreateUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateUserResponse = CreateUserResponses[keyof CreateUserResponses];
@@ -6197,14 +6159,9 @@ export type GetUsernamesResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetUsernamesResponse =
@@ -6232,8 +6189,7 @@ export type DeleteAllUsersResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteAllUsersResponse =
@@ -6261,8 +6217,7 @@ export type DeleteExpiredUsersResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteExpiredUsersResponse =
@@ -6292,8 +6247,7 @@ export type AssignUserKeyResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type AssignUserKeyResponse =
@@ -6321,8 +6275,7 @@ export type ResetAllUsersResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ResetAllUsersResponse =
@@ -6351,8 +6304,7 @@ export type PauseUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type PauseUserResponse = PauseUserResponses[keyof PauseUserResponses];
@@ -6399,14 +6351,9 @@ export type ActivateUserResponses = {
         };
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ActivateUserResponse =
@@ -6436,8 +6383,7 @@ export type UpdateUserUsernameResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateUserUsernameResponse =
@@ -6467,8 +6413,7 @@ export type UpdateUserEmailResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateUserEmailResponse =
@@ -6500,8 +6445,7 @@ export type ResetUserPasswordResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ResetUserPasswordResponse =
@@ -6530,8 +6474,7 @@ export type ResetUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ResetUserResponse = ResetUserResponses[keyof ResetUserResponses];
@@ -6560,8 +6503,7 @@ export type SetUserCooldownResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type SetUserCooldownResponse =
@@ -6592,8 +6534,7 @@ export type SubtractUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type SubtractUserResponse =
@@ -6623,8 +6564,7 @@ export type BanUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type BanUserResponse = BanUserResponses[keyof BanUserResponses];
@@ -6652,8 +6592,7 @@ export type UnbanUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UnbanUserResponse = UnbanUserResponses[keyof UnbanUserResponses];
@@ -6681,8 +6620,7 @@ export type UnpauseUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UnpauseUserResponse =
@@ -6707,15 +6645,6 @@ export type GetUserDataResponses = {
   200:
     | {
         success: true;
-        message: string;
-      }
-    | {
-        success: false;
-        message: string;
-      }
-    | string
-    | {
-        success: true;
         username: string;
         subscriptions: Array<{
           subscription: string;
@@ -6734,6 +6663,10 @@ export type GetUserDataResponses = {
         password: string | null;
         token: string;
         banned: string | null;
+      }
+    | {
+        success: false;
+        message: string;
       };
 };
 
@@ -6759,21 +6692,16 @@ export type GetUserSubscriptionResponses = {
     | {
         success: true;
         message: string;
-      }
-    | {
-        success: false;
-        message: string;
-      }
-    | string
-    | {
-        success: true;
-        message: string;
         subs: Array<{
           id: string;
           subscription: string;
           expiry: number;
           paused: number;
         }> | null;
+      }
+    | {
+        success: false;
+        message: string;
       };
 };
 
@@ -6803,8 +6731,7 @@ export type VerifyUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type VerifyUserResponse = VerifyUserResponses[keyof VerifyUserResponses];
@@ -6832,8 +6759,7 @@ export type DeleteUserHwidResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteUserHwidResponse =
@@ -6863,8 +6789,7 @@ export type CreateUserHwidResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateUserHwidResponse =
@@ -6894,8 +6819,7 @@ export type DeleteUserVarResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteUserVarResponse =
@@ -6922,10 +6846,6 @@ export type GetUserVarsResponses = {
         success: true;
         message: string;
         response: string;
-      }
-    | {
-        success: true;
-        message: string;
       }
     | {
         success: false;
@@ -6962,8 +6882,7 @@ export type SetUserVarResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type SetUserVarResponse = SetUserVarResponses[keyof SetUserVarResponses];
@@ -6993,14 +6912,9 @@ export type GetAllUserVarsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetAllUserVarsResponse =
@@ -7029,8 +6943,7 @@ export type MassDeleteUserVarsResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type MassDeleteUserVarsResponse =
@@ -7055,27 +6968,12 @@ export type CreateAppHashResponses = {
   200:
     | {
         success: true;
-        unused: number;
-        used: number;
-        paused: number;
-        banned: number;
-        totalkeys: number;
-        webhooks: number;
-        files: number;
-        vars: number;
-        resellers: number;
-        managers: number;
-        totalaccs: number;
-      }
-    | {
-        success: true;
         message: string;
       }
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateAppHashResponse =
@@ -7107,14 +7005,9 @@ export type GetAppDetailsResponses = {
         };
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetAppDetailsResponse =
@@ -7159,10 +7052,6 @@ export type GetAppSettingsResponses = {
         cooldown: number;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
       }
@@ -7194,8 +7083,7 @@ export type PauseAppResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type PauseAppResponse = PauseAppResponses[keyof PauseAppResponses];
@@ -7222,8 +7110,7 @@ export type ResetAppHashResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ResetAppHashResponse =
@@ -7253,8 +7140,7 @@ export type SetAppKeyNoteResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type SetAppKeyNoteResponse =
@@ -7290,14 +7176,9 @@ export type GetAppStatsResponses = {
         totalaccs: number;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetAppStatsResponse =
@@ -7325,8 +7206,7 @@ export type UnpauseAppResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UnpauseAppResponse = UnpauseAppResponses[keyof UnpauseAppResponses];
@@ -7370,8 +7250,7 @@ export type UpdateAppSettingsResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateAppSettingsResponse =
@@ -7401,14 +7280,9 @@ export type GetChannelChatsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetChannelChatsResponse =
@@ -7438,8 +7312,7 @@ export type CreateChannelResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateChannelResponse =
@@ -7469,8 +7342,7 @@ export type ClearChannelMessagesResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ClearChannelMessagesResponse =
@@ -7500,8 +7372,7 @@ export type DeleteChannelResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteChannelResponse =
@@ -7531,8 +7402,7 @@ export type UpdateChannelResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateChannelResponse =
@@ -7562,14 +7432,9 @@ export type GetMutedUsersResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetMutedUsersResponse =
@@ -7599,8 +7464,7 @@ export type MuteUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type MuteUserResponse = MuteUserResponses[keyof MuteUserResponses];
@@ -7628,8 +7492,7 @@ export type UnmuteUserResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UnmuteUserResponse = UnmuteUserResponses[keyof UnmuteUserResponses];
@@ -7660,8 +7523,7 @@ export type CreateVarResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateVarResponse = CreateVarResponses[keyof CreateVarResponses];
@@ -7690,8 +7552,7 @@ export type DeleteAllVarsResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteAllVarsResponse =
@@ -7720,8 +7581,7 @@ export type DeleteVarResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteVarResponse = DeleteVarResponses[keyof DeleteVarResponses];
@@ -7750,8 +7610,7 @@ export type UpdateVarResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateVarResponse = UpdateVarResponses[keyof UpdateVarResponses];
@@ -7782,14 +7641,9 @@ export type GetVarsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetVarsResponse = GetVarsResponses[keyof GetVarsResponses];
@@ -7816,14 +7670,9 @@ export type GetVarResponses = {
         authed: boolean;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetVarResponse = GetVarResponses[keyof GetVarResponses];
@@ -7855,8 +7704,7 @@ export type CreateWebhookResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateWebhookResponse =
@@ -7884,8 +7732,7 @@ export type DeleteAllWebhooksResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteAllWebhooksResponse =
@@ -7910,15 +7757,6 @@ export type GetWebhooksResponses = {
     | {
         success: true;
         message: string;
-      }
-    | {
-        success: false;
-        message: string;
-      }
-    | string
-    | {
-        success: true;
-        message: string;
         webhooks: Array<{
           webid: string;
           useragent: string;
@@ -7926,6 +7764,10 @@ export type GetWebhooksResponses = {
           baselink: string;
           short_baselink: string;
         }>;
+      }
+    | {
+        success: false;
+        message: string;
       };
 };
 
@@ -7957,8 +7799,7 @@ export type CreateWebloaderButtonResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateWebloaderButtonResponse =
@@ -7987,8 +7828,7 @@ export type DeleteWebloaderButtonResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteWebloaderButtonResponse =
@@ -8019,14 +7859,9 @@ export type GetWebloaderButtonsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetWebloaderButtonsResponse =
@@ -8055,8 +7890,7 @@ export type DeleteFileResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteFileResponse = DeleteFileResponses[keyof DeleteFileResponses];
@@ -8078,11 +7912,9 @@ export type UploadFileResponses = {
    */
   200:
     | {
-        [key: string]: never;
-      }
-    | {
         success: true;
         message: string;
+        id: string;
       }
     | {
         success: false;
@@ -8109,17 +7941,13 @@ export type DeleteAllFilesResponses = {
    */
   200:
     | {
-        [key: string]: never;
-      }
-    | {
         success: true;
         message: string;
       }
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteAllFilesResponse =
@@ -8144,17 +7972,13 @@ export type UpdateFileResponses = {
    */
   200:
     | {
-        [key: string]: never;
-      }
-    | {
         success: true;
         message: string;
       }
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateFileResponse = UpdateFileResponses[keyof UpdateFileResponses];
@@ -8175,17 +7999,17 @@ export type GetFilesResponses = {
    */
   200:
     | {
-        [key: string]: never;
-      }
-    | {
         success: true;
         message: string;
+        files: Array<{
+          id: string;
+          url: string | null;
+        }>;
       }
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetFilesResponse = GetFilesResponses[keyof GetFilesResponses];
@@ -8218,14 +8042,9 @@ export type GetFileResponses = {
         };
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetFileResponse = GetFileResponses[keyof GetFileResponses];
@@ -8252,8 +8071,7 @@ export type DeleteAllLogsResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteAllLogsResponse =
@@ -8286,14 +8104,9 @@ export type GetLogsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetLogsResponse = GetLogsResponses[keyof GetLogsResponses];
@@ -8322,8 +8135,7 @@ export type DeleteBlacklistResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteBlacklistResponse =
@@ -8351,14 +8163,9 @@ export type GetBlacklistsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetBlacklistsResponse =
@@ -8388,8 +8195,7 @@ export type CreateBlacklistResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateBlacklistResponse =
@@ -8419,8 +8225,7 @@ export type DeleteAllBlacklistsResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteAllBlacklistsResponse =
@@ -8449,8 +8254,7 @@ export type DeleteWhitelistResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteWhitelistResponse =
@@ -8479,8 +8283,7 @@ export type CreateWhitelistResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateWhitelistResponse =
@@ -8513,14 +8316,9 @@ export type GetSessionsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetSessionsResponse =
@@ -8549,8 +8347,7 @@ export type KillSessionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type KillSessionResponse =
@@ -8578,8 +8375,7 @@ export type KillAllSessionsResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type KillAllSessionsResponse =
@@ -8609,8 +8405,7 @@ export type DeleteUserSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteUserSubscriptionResponse =
@@ -8640,14 +8435,9 @@ export type GetSubscriptionsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetSubscriptionsResponse =
@@ -8677,8 +8467,7 @@ export type UpdateSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateSubscriptionResponse =
@@ -8708,8 +8497,7 @@ export type CreateSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateSubscriptionResponse =
@@ -8739,8 +8527,7 @@ export type AddSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type AddSubscriptionResponse =
@@ -8770,14 +8557,9 @@ export type FetchAllSubscriptionsResponses = {
         }>;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type FetchAllSubscriptionsResponse =
@@ -8805,14 +8587,9 @@ export type GetSubscriptionCountResponses = {
         count: number | null;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetSubscriptionCountResponse =
@@ -8840,14 +8617,9 @@ export type CountSubscriptionsResponses = {
         count: number | null;
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CountSubscriptionsResponse =
@@ -8877,8 +8649,7 @@ export type EditSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type EditSubscriptionResponse =
@@ -8910,8 +8681,7 @@ export type ExtendSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type ExtendSubscriptionResponse =
@@ -8940,8 +8710,7 @@ export type PauseSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type PauseSubscriptionResponse =
@@ -8970,8 +8739,7 @@ export type PauseAppSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type PauseAppSubscriptionResponse =
@@ -9000,8 +8768,7 @@ export type UnpauseSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UnpauseSubscriptionResponse =
@@ -9030,8 +8797,7 @@ export type UnpauseAppSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UnpauseAppSubscriptionResponse =
@@ -9061,8 +8827,7 @@ export type DelUserSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DelUserSubscriptionResponse =
@@ -9091,8 +8856,7 @@ export type DeleteAppSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteAppSubscriptionResponse =
@@ -9121,8 +8885,7 @@ export type DelAppSubscriptionResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DelAppSubscriptionResponse =
@@ -9151,8 +8914,7 @@ export type DeleteTeamAccountResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type DeleteTeamAccountResponse =
@@ -9186,8 +8948,7 @@ export type CreateTeamAccountResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type CreateTeamAccountResponse =
@@ -9221,8 +8982,7 @@ export type AddTeamAccountResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type AddTeamAccountResponse =
@@ -9251,8 +9011,7 @@ export type RemoveTeamAccountResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type RemoveTeamAccountResponse =
@@ -9289,14 +9048,9 @@ export type GetTeamBalanceResponses = {
         };
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type GetTeamBalanceResponse =
@@ -9332,8 +9086,7 @@ export type SetTeamBalanceResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type SetTeamBalanceResponse =
@@ -9370,14 +9123,9 @@ export type FetchTeamBalanceResponses = {
         };
       }
     | {
-        success: true;
-        message: string;
-      }
-    | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type FetchTeamBalanceResponse =
@@ -9413,8 +9161,7 @@ export type UpdateTeamBalanceResponses = {
     | {
         success: false;
         message: string;
-      }
-    | string;
+      };
 };
 
 export type UpdateTeamBalanceResponse =
