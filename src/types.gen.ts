@@ -5515,3 +5515,3907 @@ export type AllSeller8Data = {
   query?: never;
   url: "/seller/";
 };
+
+export type GetLicensesData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/keys/";
+};
+
+export type GetLicensesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        keys: Array<{
+          id: string;
+          expires: number;
+          app: string;
+          hwids: Array<string>;
+          banned: string | null;
+          device_limit: number;
+          freeze_expiry: number;
+          genby: string | null;
+          gendate: string;
+          key: string;
+          level: string;
+          note: string | null;
+          status:
+            "not_used" | "banned" | "expired" | "used" | "frozen" | "paused";
+          usedby: string | null;
+          usedon: number | null;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetLicensesResponse =
+  GetLicensesResponses[keyof GetLicensesResponses];
+
+export type UpdateLicenseData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    expiry: number;
+    key: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/";
+};
+
+export type UpdateLicenseResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateLicenseResponse =
+  UpdateLicenseResponses[keyof UpdateLicenseResponses];
+
+export type CreateLicenseData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    amount?: string;
+    level?: string;
+    character?: string;
+    expiry: number;
+    note?: string;
+    owner?: string;
+    mask?: string;
+    device_limit?: string;
+    unlimited?: number;
+    freeze_expiry?: number;
+    data?: {
+      quantity?: string;
+      order: {
+        quantity?: string;
+      };
+      Quantity?: string;
+    };
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/";
+};
+
+export type CreateLicenseResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        keys: Array<string>;
+      }
+    | {
+        success: true;
+        message: string;
+        key: string;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateLicenseResponse =
+  CreateLicenseResponses[keyof CreateLicenseResponses];
+
+export type VerifyLicenseData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    key: string;
+  };
+  url: "/v2/seller/keys/verify";
+};
+
+export type VerifyLicenseResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type VerifyLicenseResponse =
+  VerifyLicenseResponses[keyof VerifyLicenseResponses];
+
+export type GetLicenseInfoData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    key: string;
+  };
+  url: "/v2/seller/keys/info";
+};
+
+export type GetLicenseInfoResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        duration: string;
+        note: string | null;
+        status:
+          "not_used" | "banned" | "expired" | "used" | "frozen" | "paused";
+        level: string;
+        createdby: string | null;
+        usedby: string | null;
+        usedon: number | null;
+        creationdate: string;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetLicenseInfoResponse =
+  GetLicenseInfoResponses[keyof GetLicenseInfoResponses];
+
+export type GetLicenseNoteData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    key: string;
+  };
+  url: "/v2/seller/keys/note";
+};
+
+export type GetLicenseNoteResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        note: string | null;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetLicenseNoteResponse =
+  GetLicenseNoteResponses[keyof GetLicenseNoteResponses];
+
+export type ExtendUnusedLicensesData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    time?: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/extend/unused";
+};
+
+export type ExtendUnusedLicensesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ExtendUnusedLicensesResponse =
+  ExtendUnusedLicensesResponses[keyof ExtendUnusedLicensesResponses];
+
+export type ExtendAllLicensesData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    time: number;
+    activeOnly?: boolean;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/extend/all";
+};
+
+export type ExtendAllLicensesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ExtendAllLicensesResponse =
+  ExtendAllLicensesResponses[keyof ExtendAllLicensesResponses];
+
+export type DeleteLicenseData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    key: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/del/";
+};
+
+export type DeleteLicenseResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteLicenseResponse =
+  DeleteLicenseResponses[keyof DeleteLicenseResponses];
+
+export type DeleteAllLicensesData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/del/all";
+};
+
+export type DeleteAllLicensesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteAllLicensesResponse =
+  DeleteAllLicensesResponses[keyof DeleteAllLicensesResponses];
+
+export type DeleteManyLicensesData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    key: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/del/many";
+};
+
+export type DeleteManyLicensesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteManyLicensesResponse =
+  DeleteManyLicensesResponses[keyof DeleteManyLicensesResponses];
+
+export type DeleteUnusedLicensesData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/del/unused";
+};
+
+export type DeleteUnusedLicensesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteUnusedLicensesResponse =
+  DeleteUnusedLicensesResponses[keyof DeleteUnusedLicensesResponses];
+
+export type DeleteUsedLicensesData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/del/used";
+};
+
+export type DeleteUsedLicensesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteUsedLicensesResponse =
+  DeleteUsedLicensesResponses[keyof DeleteUsedLicensesResponses];
+
+export type SubtractLicenseData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    seconds: number;
+    sub: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/subtract";
+};
+
+export type SubtractLicenseResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type SubtractLicenseResponse =
+  SubtractLicenseResponses[keyof SubtractLicenseResponses];
+
+export type BanLicenseData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    key: string;
+    reason: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/ban";
+};
+
+export type BanLicenseResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type BanLicenseResponse = BanLicenseResponses[keyof BanLicenseResponses];
+
+export type UnbanLicenseData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    key: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/keys/unban";
+};
+
+export type UnbanLicenseResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UnbanLicenseResponse =
+  UnbanLicenseResponses[keyof UnbanLicenseResponses];
+
+export type DeleteUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/";
+};
+
+export type DeleteUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteUserResponse = DeleteUserResponses[keyof DeleteUserResponses];
+
+export type GetUsersData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    email: string;
+  };
+  url: "/v2/seller/users/";
+};
+
+export type GetUsersResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        mutes: Array<{
+          id: string;
+          banned: string | null;
+          cooldown: number | null;
+          createdate: number | null;
+          device_limit: number;
+          email: string | null;
+          fa: number;
+          freeze_expiry: number;
+          googleAuthCode: string | null;
+          lastlogin: number | null;
+          owner: string | null;
+          password: string | null;
+          userHwids: Array<{
+            hwid: string;
+          }>;
+          username: string;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetUsersResponse = GetUsersResponses[keyof GetUsersResponses];
+
+export type CreateUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    type: "adduser";
+    user: string;
+    expiry: number;
+    sub: string;
+    pass: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/";
+};
+
+export type CreateUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateUserResponse = CreateUserResponses[keyof CreateUserResponses];
+
+export type GetUsernamesData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/users/usernames";
+};
+
+export type GetUsernamesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        mutes: Array<{
+          username: string;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetUsernamesResponse =
+  GetUsernamesResponses[keyof GetUsernamesResponses];
+
+export type DeleteAllUsersData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/all";
+};
+
+export type DeleteAllUsersResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteAllUsersResponse =
+  DeleteAllUsersResponses[keyof DeleteAllUsersResponses];
+
+export type DeleteExpiredUsersData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/expired";
+};
+
+export type DeleteExpiredUsersResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteExpiredUsersResponse =
+  DeleteExpiredUsersResponses[keyof DeleteExpiredUsersResponses];
+
+export type AssignUserKeyData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    key: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/assign";
+};
+
+export type AssignUserKeyResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type AssignUserKeyResponse =
+  AssignUserKeyResponses[keyof AssignUserKeyResponses];
+
+export type ResetAllUsersData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/resetall";
+};
+
+export type ResetAllUsersResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ResetAllUsersResponse =
+  ResetAllUsersResponses[keyof ResetAllUsersResponses];
+
+export type PauseUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/pause";
+};
+
+export type PauseUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type PauseUserResponse = PauseUserResponses[keyof PauseUserResponses];
+
+export type ActivateUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    key: string;
+    pass: string;
+    hwid: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/active";
+};
+
+export type ActivateUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        info: {
+          username: string;
+          subscriptions: {
+            username: string;
+            subscriptions: Array<{
+              subscription: string;
+              key: string;
+              expiry: string;
+              timeleft: number;
+              level: string;
+            }>;
+            ip: string;
+            hwid?: string;
+            createdate: string;
+            lastlogin: string;
+          };
+          ip: string;
+        };
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ActivateUserResponse =
+  ActivateUserResponses[keyof ActivateUserResponses];
+
+export type UpdateUserUsernameData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    currentUsername: string;
+    newUsername: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/username";
+};
+
+export type UpdateUserUsernameResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateUserUsernameResponse =
+  UpdateUserUsernameResponses[keyof UpdateUserUsernameResponses];
+
+export type UpdateUserEmailData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    email: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/email";
+};
+
+export type UpdateUserEmailResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateUserEmailResponse =
+  UpdateUserEmailResponses[keyof UpdateUserEmailResponses];
+
+export type ResetUserPasswordData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    passwd?: string;
+    user: string;
+    pass?: string;
+    password?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/resetpw";
+};
+
+export type ResetUserPasswordResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ResetUserPasswordResponse =
+  ResetUserPasswordResponses[keyof ResetUserPasswordResponses];
+
+export type ResetUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/resetuser";
+};
+
+export type ResetUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ResetUserResponse = ResetUserResponses[keyof ResetUserResponses];
+
+export type SetUserCooldownData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    cooldown: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/cooldown";
+};
+
+export type SetUserCooldownResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type SetUserCooldownResponse =
+  SetUserCooldownResponses[keyof SetUserCooldownResponses];
+
+export type SubtractUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    seconds: number;
+    sub: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/subtract";
+};
+
+export type SubtractUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type SubtractUserResponse =
+  SubtractUserResponses[keyof SubtractUserResponses];
+
+export type BanUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    reason: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/ban";
+};
+
+export type BanUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type BanUserResponse = BanUserResponses[keyof BanUserResponses];
+
+export type UnbanUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/unban";
+};
+
+export type UnbanUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UnbanUserResponse = UnbanUserResponses[keyof UnbanUserResponses];
+
+export type UnpauseUserData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/unpause";
+};
+
+export type UnpauseUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UnpauseUserResponse =
+  UnpauseUserResponses[keyof UnpauseUserResponses];
+
+export type GetUserDataData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    type: "userdata";
+    user: string;
+  };
+  url: "/v2/seller/users/data";
+};
+
+export type GetUserDataResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string
+    | {
+        success: true;
+        username: string;
+        subscriptions: Array<{
+          subscription: string;
+          key?: string;
+          expiry: number;
+        }>;
+        uservars: Array<{
+          name: string;
+          data: string;
+        }>;
+        ip: string | null;
+        hwid: Array<string>;
+        createdate: number | null;
+        lastlogin: number | null;
+        cooldown: number | null;
+        password: string | null;
+        token: string;
+        banned: string | null;
+      };
+};
+
+export type GetUserDataResponse =
+  GetUserDataResponses[keyof GetUserDataResponses];
+
+export type GetUserSubscriptionData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  url: "/v2/seller/users/usersub";
+};
+
+export type GetUserSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string
+    | {
+        success: true;
+        message: string;
+        subs: Array<{
+          id: string;
+          subscription: string;
+          expiry: number;
+          paused: number;
+        }> | null;
+      };
+};
+
+export type GetUserSubscriptionResponse =
+  GetUserSubscriptionResponses[keyof GetUserSubscriptionResponses];
+
+export type VerifyUserData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  url: "/v2/seller/users/verify";
+};
+
+export type VerifyUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type VerifyUserResponse = VerifyUserResponses[keyof VerifyUserResponses];
+
+export type DeleteUserHwidData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    hwid: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/hwid/";
+};
+
+export type DeleteUserHwidResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteUserHwidResponse =
+  DeleteUserHwidResponses[keyof DeleteUserHwidResponses];
+
+export type CreateUserHwidData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    hwid: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/hwid/";
+};
+
+export type CreateUserHwidResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateUserHwidResponse =
+  CreateUserHwidResponses[keyof CreateUserHwidResponses];
+
+export type DeleteUserVarData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    var: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/vars/";
+};
+
+export type DeleteUserVarResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteUserVarResponse =
+  DeleteUserVarResponses[keyof DeleteUserVarResponses];
+
+export type GetUserVarsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    var: string;
+    user: string;
+  };
+  url: "/v2/seller/users/vars/";
+};
+
+export type GetUserVarsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        response: string;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetUserVarsResponse =
+  GetUserVarsResponses[keyof GetUserVarsResponses];
+
+export type SetUserVarData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    var: string;
+    data: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/vars/setvar";
+};
+
+export type SetUserVarResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type SetUserVarResponse = SetUserVarResponses[keyof SetUserVarResponses];
+
+export type GetAllUserVarsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/users/vars/all";
+};
+
+export type GetAllUserVarsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        vars: Array<{
+          name: string;
+          data: string;
+          user: string;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetAllUserVarsResponse =
+  GetAllUserVarsResponses[keyof GetAllUserVarsResponses];
+
+export type MassDeleteUserVarsData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/users/vars/mass";
+};
+
+export type MassDeleteUserVarsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type MassDeleteUserVarsResponse =
+  MassDeleteUserVarsResponses[keyof MassDeleteUserVarsResponses];
+
+export type CreateAppHashData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    hash: string;
+    name?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/app/hash";
+};
+
+export type CreateAppHashResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        unused: number;
+        used: number;
+        paused: number;
+        banned: number;
+        totalkeys: number;
+        webhooks: number;
+        files: number;
+        vars: number;
+        resellers: number;
+        managers: number;
+        totalaccs: number;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateAppHashResponse =
+  CreateAppHashResponses[keyof CreateAppHashResponses];
+
+export type GetAppDetailsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/app/details";
+};
+
+export type GetAppDetailsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        appdetails: {
+          name: string;
+          ownerid: string;
+          secret: string;
+          version: string;
+        };
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetAppDetailsResponse =
+  GetAppDetailsResponses[keyof GetAppDetailsResponses];
+
+export type GetAppSettingsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/app/settings";
+};
+
+export type GetAppSettingsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        enabled: boolean;
+        "hwid-lock": boolean;
+        version: string;
+        download: string | null;
+        webdownload: string | null;
+        webhook: string | null;
+        resellerstore: string | null;
+        disabledmsg: string;
+        usernametakenmsg: string;
+        licenseinvalidmsg: string;
+        keytakenmsg: string;
+        nosubmsg: string | null;
+        userinvalidmsg: string;
+        passinvalidmsg: string;
+        hwidmismatchmsg: string;
+        noactivesubmsg: string;
+        blackedmsg: string;
+        sellixsecret: string | null;
+        cooldown: number;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetAppSettingsResponse =
+  GetAppSettingsResponses[keyof GetAppSettingsResponses];
+
+export type PauseAppData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/app/pause";
+};
+
+export type PauseAppResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type PauseAppResponse = PauseAppResponses[keyof PauseAppResponses];
+
+export type ResetAppHashData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/app/resethash";
+};
+
+export type ResetAppHashResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ResetAppHashResponse =
+  ResetAppHashResponses[keyof ResetAppHashResponses];
+
+export type SetAppKeyNoteData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    key: string;
+    note: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/app/note";
+};
+
+export type SetAppKeyNoteResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type SetAppKeyNoteResponse =
+  SetAppKeyNoteResponses[keyof SetAppKeyNoteResponses];
+
+export type GetAppStatsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/app/stats";
+};
+
+export type GetAppStatsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        unused: number;
+        used: number;
+        paused: number;
+        banned: number;
+        totalkeys: number;
+        webhooks: number;
+        files: number;
+        vars: number;
+        resellers: number;
+        managers: number;
+        totalaccs: number;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetAppStatsResponse =
+  GetAppStatsResponses[keyof GetAppStatsResponses];
+
+export type UnpauseAppData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/app/unpause";
+};
+
+export type UnpauseAppResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UnpauseAppResponse = UnpauseAppResponses[keyof UnpauseAppResponses];
+
+export type UpdateAppSettingsData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    enabled?: string;
+    hwidcheck?: string;
+    ver?: string;
+    download?: string;
+    webhook?: string;
+    resellerstore?: string;
+    appdisabled?: string;
+    usernametaken?: string;
+    keynotfound?: string;
+    keyused?: string;
+    nosublevel?: string;
+    usernamenotfound?: string;
+    passmismatch?: string;
+    hwidmismatch?: string;
+    noactivesubs?: string;
+    hwidblacked?: string;
+    sellixsecret?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/app/updatesettings";
+};
+
+export type UpdateAppSettingsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateAppSettingsResponse =
+  UpdateAppSettingsResponses[keyof UpdateAppSettingsResponses];
+
+export type GetChannelChatsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/channels/";
+};
+
+export type GetChannelChatsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        chats: Array<{
+          name: string;
+          delay: number;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetChannelChatsResponse =
+  GetChannelChatsResponses[keyof GetChannelChatsResponses];
+
+export type CreateChannelData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+    delay?: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/channels/";
+};
+
+export type CreateChannelResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateChannelResponse =
+  CreateChannelResponses[keyof CreateChannelResponses];
+
+export type ClearChannelMessagesData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+    delay?: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/channels/clear";
+};
+
+export type ClearChannelMessagesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ClearChannelMessagesResponse =
+  ClearChannelMessagesResponses[keyof ClearChannelMessagesResponses];
+
+export type DeleteChannelData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+    delay?: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/channels/delchannel";
+};
+
+export type DeleteChannelResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteChannelResponse =
+  DeleteChannelResponses[keyof DeleteChannelResponses];
+
+export type UpdateChannelData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+    delay: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/channels/editchan";
+};
+
+export type UpdateChannelResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateChannelResponse =
+  UpdateChannelResponses[keyof UpdateChannelResponses];
+
+export type GetMutedUsersData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/channels/users/";
+};
+
+export type GetMutedUsersResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        mutes: Array<{
+          user: string;
+          time: number;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetMutedUsersResponse =
+  GetMutedUsersResponses[keyof GetMutedUsersResponses];
+
+export type MuteUserData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    time: number;
+  };
+  url: "/v2/seller/channels/users/mute";
+};
+
+export type MuteUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type MuteUserResponse = MuteUserResponses[keyof MuteUserResponses];
+
+export type UnmuteUserData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  url: "/v2/seller/channels/users/unmute";
+};
+
+export type UnmuteUserResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UnmuteUserResponse = UnmuteUserResponses[keyof UnmuteUserResponses];
+
+export type CreateVarData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    type: "addvar";
+    name: string;
+    data: string;
+    authed: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/vars/";
+};
+
+export type CreateVarResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateVarResponse = CreateVarResponses[keyof CreateVarResponses];
+
+export type DeleteAllVarsData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    cooldown: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/vars/delallvars";
+};
+
+export type DeleteAllVarsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteAllVarsResponse =
+  DeleteAllVarsResponses[keyof DeleteAllVarsResponses];
+
+export type DeleteVarData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/vars/delvar";
+};
+
+export type DeleteVarResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteVarResponse = DeleteVarResponses[keyof DeleteVarResponses];
+
+export type UpdateVarData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    data: string;
+    varid: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/vars/editvar";
+};
+
+export type UpdateVarResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateVarResponse = UpdateVarResponses[keyof UpdateVarResponses];
+
+export type GetVarsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    type: "fetchallvars";
+  };
+  url: "/v2/seller/vars/fetch";
+};
+
+export type GetVarsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        vars: Array<{
+          varid: string;
+          msg: string;
+          authed: number;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetVarsResponse = GetVarsResponses[keyof GetVarsResponses];
+
+export type GetVarData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+  };
+  url: "/v2/seller/vars/getvar";
+};
+
+export type GetVarResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        authed: boolean;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetVarResponse = GetVarResponses[keyof GetVarResponses];
+
+export type CreateWebhookData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    type: "addwebhook";
+    authed: number;
+    webid: string;
+    baseurl: string;
+    ua?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/webhooks/addwebhook";
+};
+
+export type CreateWebhookResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateWebhookResponse =
+  CreateWebhookResponses[keyof CreateWebhookResponses];
+
+export type DeleteAllWebhooksData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/webhooks/delallwebhooks";
+};
+
+export type DeleteAllWebhooksResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteAllWebhooksResponse =
+  DeleteAllWebhooksResponses[keyof DeleteAllWebhooksResponses];
+
+export type GetWebhooksData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    type: "fetchallwebhooks";
+  };
+  url: "/v2/seller/webhooks/fetchallwebhooks";
+};
+
+export type GetWebhooksResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string
+    | {
+        success: true;
+        message: string;
+        webhooks: Array<{
+          webid: string;
+          useragent: string;
+          authed: number;
+          baselink: string;
+          short_baselink: string;
+        }>;
+      };
+};
+
+export type GetWebhooksResponse =
+  GetWebhooksResponses[keyof GetWebhooksResponses];
+
+export type CreateWebloaderButtonData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    type: "addbutton";
+    text: string;
+    value: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/webloader/addbutton";
+};
+
+export type CreateWebloaderButtonResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateWebloaderButtonResponse =
+  CreateWebloaderButtonResponses[keyof CreateWebloaderButtonResponses];
+
+export type DeleteWebloaderButtonData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    value: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/webloader/delbutton";
+};
+
+export type DeleteWebloaderButtonResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteWebloaderButtonResponse =
+  DeleteWebloaderButtonResponses[keyof DeleteWebloaderButtonResponses];
+
+export type GetWebloaderButtonsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    type: "fetchallbuttons";
+  };
+  url: "/v2/seller/webloader/fetchallbuttons";
+};
+
+export type GetWebloaderButtonsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        buttons: Array<{
+          text: string;
+          value: string;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetWebloaderButtonsResponse =
+  GetWebloaderButtonsResponses[keyof GetWebloaderButtonsResponses];
+
+export type DeleteFileData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    fileid: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/files/";
+};
+
+export type DeleteFileResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteFileResponse = DeleteFileResponses[keyof DeleteFileResponses];
+
+export type UploadFileData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    url: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/files/";
+};
+
+export type UploadFileResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        [key: string]: never;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UploadFileResponse = UploadFileResponses[keyof UploadFileResponses];
+
+export type DeleteAllFilesData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/files/all";
+};
+
+export type DeleteAllFilesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        [key: string]: never;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteAllFilesResponse =
+  DeleteAllFilesResponses[keyof DeleteAllFilesResponses];
+
+export type UpdateFileData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    id: string;
+    url: string;
+    authed: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/files/editvar";
+};
+
+export type UpdateFileResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        [key: string]: never;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateFileResponse = UpdateFileResponses[keyof UpdateFileResponses];
+
+export type GetFilesData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/files/fetch";
+};
+
+export type GetFilesResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        [key: string]: never;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetFilesResponse = GetFilesResponses[keyof GetFilesResponses];
+
+export type GetFileData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    id: string;
+  };
+  url: "/v2/seller/files/getvar";
+};
+
+export type GetFileResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        file: {
+          authed: number;
+          id: string;
+          name: string;
+          size: string;
+          url: string | null;
+        };
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetFileResponse = GetFileResponses[keyof GetFileResponses];
+
+export type DeleteAllLogsData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/logs/";
+};
+
+export type DeleteAllLogsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteAllLogsResponse =
+  DeleteAllLogsResponses[keyof DeleteAllLogsResponses];
+
+export type GetLogsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/logs/";
+};
+
+export type GetLogsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        logs: Array<{
+          id: string;
+          credential: string | null;
+          logdata: string;
+          logdate: string;
+          pcuser: string | null;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetLogsResponse = GetLogsResponses[keyof GetLogsResponses];
+
+export type DeleteBlacklistData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    blacktype: "hwid" | "ip" | "country" | "region" | "asnum";
+    data: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/rules/blacklist/";
+};
+
+export type DeleteBlacklistResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteBlacklistResponse =
+  DeleteBlacklistResponses[keyof DeleteBlacklistResponses];
+
+export type GetBlacklistsData = {
+  body?: never;
+  path?: never;
+  query?: never;
+  url: "/v2/seller/rules/blacklist/";
+};
+
+export type GetBlacklistsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        blacklists: Array<{
+          hwid: string | null;
+          ip: string | null;
+          type: "hwid" | "ip" | "country" | "region" | "asnum";
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetBlacklistsResponse =
+  GetBlacklistsResponses[keyof GetBlacklistsResponses];
+
+export type CreateBlacklistData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    hwid?: string;
+    ip?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/rules/blacklist/";
+};
+
+export type CreateBlacklistResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateBlacklistResponse =
+  CreateBlacklistResponses[keyof CreateBlacklistResponses];
+
+export type DeleteAllBlacklistsData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    hwid?: string;
+    ip?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/rules/blacklist/all";
+};
+
+export type DeleteAllBlacklistsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteAllBlacklistsResponse =
+  DeleteAllBlacklistsResponses[keyof DeleteAllBlacklistsResponses];
+
+export type DeleteWhitelistData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    ip: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/ruleswhitelist/";
+};
+
+export type DeleteWhitelistResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteWhitelistResponse =
+  DeleteWhitelistResponses[keyof DeleteWhitelistResponses];
+
+export type CreateWhitelistData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    ip: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/ruleswhitelist/";
+};
+
+export type CreateWhitelistResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateWhitelistResponse =
+  CreateWhitelistResponses[keyof CreateWhitelistResponses];
+
+export type GetSessionsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/session/";
+};
+
+export type GetSessionsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        sessions: Array<{
+          credential: string | null;
+          expiry: number;
+          id: string;
+          ip: string | null;
+          validated: number;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetSessionsResponse =
+  GetSessionsResponses[keyof GetSessionsResponses];
+
+export type KillSessionData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    sessid: string;
+  };
+  url: "/v2/seller/session/kill";
+};
+
+export type KillSessionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type KillSessionResponse =
+  KillSessionResponses[keyof KillSessionResponses];
+
+export type KillAllSessionsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/session/kill/all";
+};
+
+export type KillAllSessionsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type KillAllSessionsResponse =
+  KillAllSessionsResponses[keyof KillAllSessionsResponses];
+
+export type DeleteUserSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    sub: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/";
+};
+
+export type DeleteUserSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteUserSubscriptionResponse =
+  DeleteUserSubscriptionResponses[keyof DeleteUserSubscriptionResponses];
+
+export type GetSubscriptionsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/subscription/";
+};
+
+export type GetSubscriptionsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        subs: Array<{
+          name: string;
+          level: string;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetSubscriptionsResponse =
+  GetSubscriptionsResponses[keyof GetSubscriptionsResponses];
+
+export type UpdateSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    sub: string;
+    level: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/";
+};
+
+export type UpdateSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateSubscriptionResponse =
+  UpdateSubscriptionResponses[keyof UpdateSubscriptionResponses];
+
+export type CreateSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+    level: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/";
+};
+
+export type CreateSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateSubscriptionResponse =
+  CreateSubscriptionResponses[keyof CreateSubscriptionResponses];
+
+export type AddSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+    level: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/addsub";
+};
+
+export type AddSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type AddSubscriptionResponse =
+  AddSubscriptionResponses[keyof AddSubscriptionResponses];
+
+export type FetchAllSubscriptionsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+  };
+  url: "/v2/seller/subscription/fetchallsubs";
+};
+
+export type FetchAllSubscriptionsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        subs: Array<{
+          name: string;
+          level: string;
+        }>;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type FetchAllSubscriptionsResponse =
+  FetchAllSubscriptionsResponses[keyof FetchAllSubscriptionsResponses];
+
+export type GetSubscriptionCountData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+  };
+  url: "/v2/seller/subscription/count";
+};
+
+export type GetSubscriptionCountResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        count: number | null;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetSubscriptionCountResponse =
+  GetSubscriptionCountResponses[keyof GetSubscriptionCountResponses];
+
+export type CountSubscriptionsData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+  };
+  url: "/v2/seller/subscription/countsubs";
+};
+
+export type CountSubscriptionsResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+        count: number | null;
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CountSubscriptionsResponse =
+  CountSubscriptionsResponses[keyof CountSubscriptionsResponses];
+
+export type EditSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    sub: string;
+    level: number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/editsub";
+};
+
+export type EditSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type EditSubscriptionResponse =
+  EditSubscriptionResponses[keyof EditSubscriptionResponses];
+
+export type ExtendSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    expiry: number;
+    sub: string;
+    activeOnly?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/extend";
+};
+
+export type ExtendSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type ExtendSubscriptionResponse =
+  ExtendSubscriptionResponses[keyof ExtendSubscriptionResponses];
+
+export type PauseSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    subscription: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/pause";
+};
+
+export type PauseSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type PauseSubscriptionResponse =
+  PauseSubscriptionResponses[keyof PauseSubscriptionResponses];
+
+export type PauseAppSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    subscription: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/pausesub";
+};
+
+export type PauseAppSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type PauseAppSubscriptionResponse =
+  PauseAppSubscriptionResponses[keyof PauseAppSubscriptionResponses];
+
+export type UnpauseSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    subscription: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/unpause";
+};
+
+export type UnpauseSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UnpauseSubscriptionResponse =
+  UnpauseSubscriptionResponses[keyof UnpauseSubscriptionResponses];
+
+export type UnpauseAppSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    subscription: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/unpausesub";
+};
+
+export type UnpauseAppSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UnpauseAppSubscriptionResponse =
+  UnpauseAppSubscriptionResponses[keyof UnpauseAppSubscriptionResponses];
+
+export type DelUserSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    sub: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/delsub";
+};
+
+export type DelUserSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DelUserSubscriptionResponse =
+  DelUserSubscriptionResponses[keyof DelUserSubscriptionResponses];
+
+export type DeleteAppSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/app";
+};
+
+export type DeleteAppSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteAppSubscriptionResponse =
+  DeleteAppSubscriptionResponses[keyof DeleteAppSubscriptionResponses];
+
+export type DelAppSubscriptionData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    name: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/subscription/delappsub";
+};
+
+export type DelAppSubscriptionResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DelAppSubscriptionResponse =
+  DelAppSubscriptionResponses[keyof DelAppSubscriptionResponses];
+
+export type DeleteTeamAccountData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/team/";
+};
+
+export type DeleteTeamAccountResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type DeleteTeamAccountResponse =
+  DeleteTeamAccountResponses[keyof DeleteTeamAccountResponses];
+
+export type CreateTeamAccountData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    role: "seller" | "reseller" | "developer" | "manager" | "tester";
+    email: string;
+    pass: string;
+    keylevels: string;
+    perms?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/team/";
+};
+
+export type CreateTeamAccountResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type CreateTeamAccountResponse =
+  CreateTeamAccountResponses[keyof CreateTeamAccountResponses];
+
+export type AddTeamAccountData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+    role: "seller" | "reseller" | "developer" | "manager" | "tester";
+    email: string;
+    pass: string;
+    keylevels: string;
+    perms?: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/team/addAccount";
+};
+
+export type AddTeamAccountResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type AddTeamAccountResponse =
+  AddTeamAccountResponses[keyof AddTeamAccountResponses];
+
+export type RemoveTeamAccountData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    user: string;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/team/deleteAccount";
+};
+
+export type RemoveTeamAccountResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type RemoveTeamAccountResponse =
+  RemoveTeamAccountResponses[keyof RemoveTeamAccountResponses];
+
+export type GetTeamBalanceData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    username: string;
+    appname: string;
+  };
+  url: "/v2/seller/team/balance";
+};
+
+export type GetTeamBalanceResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        balance: {
+          days: number;
+          weeks: number;
+          months: number;
+          months3: number;
+          months6: number;
+          years: number;
+          lifetime: number;
+          total_keys: number;
+        };
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type GetTeamBalanceResponse =
+  GetTeamBalanceResponses[keyof GetTeamBalanceResponses];
+
+export type SetTeamBalanceData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    username: string;
+    day?: string | number;
+    week?: string | number;
+    month?: string | number;
+    threemonth?: string | number;
+    sixmonth?: string | number;
+    lifetime?: string | number;
+    year?: string | number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/team/balance";
+};
+
+export type SetTeamBalanceResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type SetTeamBalanceResponse =
+  SetTeamBalanceResponses[keyof SetTeamBalanceResponses];
+
+export type FetchTeamBalanceData = {
+  body?: never;
+  path?: never;
+  query: {
+    sellerkey: string;
+    format?: string;
+    username: string;
+    appname: string;
+  };
+  url: "/v2/seller/team/getbalance";
+};
+
+export type FetchTeamBalanceResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        balance: {
+          days: number;
+          weeks: number;
+          months: number;
+          months3: number;
+          months6: number;
+          years: number;
+          lifetime: number;
+          total_keys: number;
+        };
+      }
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type FetchTeamBalanceResponse =
+  FetchTeamBalanceResponses[keyof FetchTeamBalanceResponses];
+
+export type UpdateTeamBalanceData = {
+  body: {
+    sellerkey: string;
+    format?: string;
+    username: string;
+    day?: string | number;
+    week?: string | number;
+    month?: string | number;
+    threemonth?: string | number;
+    sixmonth?: string | number;
+    lifetime?: string | number;
+    year?: string | number;
+  };
+  path?: never;
+  query?: never;
+  url: "/v2/seller/team/setbalance";
+};
+
+export type UpdateTeamBalanceResponses = {
+  /**
+   * Response for status 200
+   */
+  200:
+    | {
+        success: true;
+        message: string;
+      }
+    | {
+        success: false;
+        message: string;
+      }
+    | string;
+};
+
+export type UpdateTeamBalanceResponse =
+  UpdateTeamBalanceResponses[keyof UpdateTeamBalanceResponses];

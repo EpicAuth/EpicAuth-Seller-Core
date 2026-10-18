@@ -9,6 +9,12 @@ import type {
 } from "./client";
 import { client } from "./client.gen";
 import type {
+  ActivateUserData,
+  ActivateUserResponses,
+  AddSubscriptionData,
+  AddSubscriptionResponses,
+  AddTeamAccountData,
+  AddTeamAccountResponses,
   AllSeller2Data,
   AllSeller3Data,
   AllSeller4Data,
@@ -17,6 +23,232 @@ import type {
   AllSeller7Data,
   AllSeller8Data,
   AllSellerData,
+  AssignUserKeyData,
+  AssignUserKeyResponses,
+  BanLicenseData,
+  BanLicenseResponses,
+  BanUserData,
+  BanUserResponses,
+  ClearChannelMessagesData,
+  ClearChannelMessagesResponses,
+  CountSubscriptionsData,
+  CountSubscriptionsResponses,
+  CreateAppHashData,
+  CreateAppHashResponses,
+  CreateBlacklistData,
+  CreateBlacklistResponses,
+  CreateChannelData,
+  CreateChannelResponses,
+  CreateLicenseData,
+  CreateLicenseResponses,
+  CreateSubscriptionData,
+  CreateSubscriptionResponses,
+  CreateTeamAccountData,
+  CreateTeamAccountResponses,
+  CreateUserData,
+  CreateUserHwidData,
+  CreateUserHwidResponses,
+  CreateUserResponses,
+  CreateVarData,
+  CreateVarResponses,
+  CreateWebhookData,
+  CreateWebhookResponses,
+  CreateWebloaderButtonData,
+  CreateWebloaderButtonResponses,
+  CreateWhitelistData,
+  CreateWhitelistResponses,
+  DelAppSubscriptionData,
+  DelAppSubscriptionResponses,
+  DeleteAllBlacklistsData,
+  DeleteAllBlacklistsResponses,
+  DeleteAllFilesData,
+  DeleteAllFilesResponses,
+  DeleteAllLicensesData,
+  DeleteAllLicensesResponses,
+  DeleteAllLogsData,
+  DeleteAllLogsResponses,
+  DeleteAllUsersData,
+  DeleteAllUsersResponses,
+  DeleteAllVarsData,
+  DeleteAllVarsResponses,
+  DeleteAllWebhooksData,
+  DeleteAllWebhooksResponses,
+  DeleteAppSubscriptionData,
+  DeleteAppSubscriptionResponses,
+  DeleteBlacklistData,
+  DeleteBlacklistResponses,
+  DeleteChannelData,
+  DeleteChannelResponses,
+  DeleteExpiredUsersData,
+  DeleteExpiredUsersResponses,
+  DeleteFileData,
+  DeleteFileResponses,
+  DeleteLicenseData,
+  DeleteLicenseResponses,
+  DeleteManyLicensesData,
+  DeleteManyLicensesResponses,
+  DeleteTeamAccountData,
+  DeleteTeamAccountResponses,
+  DeleteUnusedLicensesData,
+  DeleteUnusedLicensesResponses,
+  DeleteUsedLicensesData,
+  DeleteUsedLicensesResponses,
+  DeleteUserData,
+  DeleteUserHwidData,
+  DeleteUserHwidResponses,
+  DeleteUserResponses,
+  DeleteUserSubscriptionData,
+  DeleteUserSubscriptionResponses,
+  DeleteUserVarData,
+  DeleteUserVarResponses,
+  DeleteVarData,
+  DeleteVarResponses,
+  DeleteWebloaderButtonData,
+  DeleteWebloaderButtonResponses,
+  DeleteWhitelistData,
+  DeleteWhitelistResponses,
+  DelUserSubscriptionData,
+  DelUserSubscriptionResponses,
+  EditSubscriptionData,
+  EditSubscriptionResponses,
+  ExtendAllLicensesData,
+  ExtendAllLicensesResponses,
+  ExtendSubscriptionData,
+  ExtendSubscriptionResponses,
+  ExtendUnusedLicensesData,
+  ExtendUnusedLicensesResponses,
+  FetchAllSubscriptionsData,
+  FetchAllSubscriptionsResponses,
+  FetchTeamBalanceData,
+  FetchTeamBalanceResponses,
+  GetAllUserVarsData,
+  GetAllUserVarsResponses,
+  GetAppDetailsData,
+  GetAppDetailsResponses,
+  GetAppSettingsData,
+  GetAppSettingsResponses,
+  GetAppStatsData,
+  GetAppStatsResponses,
+  GetBlacklistsData,
+  GetBlacklistsResponses,
+  GetChannelChatsData,
+  GetChannelChatsResponses,
+  GetFileData,
+  GetFileResponses,
+  GetFilesData,
+  GetFilesResponses,
+  GetLicenseInfoData,
+  GetLicenseInfoResponses,
+  GetLicenseNoteData,
+  GetLicenseNoteResponses,
+  GetLicensesData,
+  GetLicensesResponses,
+  GetLogsData,
+  GetLogsResponses,
+  GetMutedUsersData,
+  GetMutedUsersResponses,
+  GetSessionsData,
+  GetSessionsResponses,
+  GetSubscriptionCountData,
+  GetSubscriptionCountResponses,
+  GetSubscriptionsData,
+  GetSubscriptionsResponses,
+  GetTeamBalanceData,
+  GetTeamBalanceResponses,
+  GetUserDataData,
+  GetUserDataResponses,
+  GetUsernamesData,
+  GetUsernamesResponses,
+  GetUsersData,
+  GetUsersResponses,
+  GetUserSubscriptionData,
+  GetUserSubscriptionResponses,
+  GetUserVarsData,
+  GetUserVarsResponses,
+  GetVarData,
+  GetVarResponses,
+  GetVarsData,
+  GetVarsResponses,
+  GetWebhooksData,
+  GetWebhooksResponses,
+  GetWebloaderButtonsData,
+  GetWebloaderButtonsResponses,
+  KillAllSessionsData,
+  KillAllSessionsResponses,
+  KillSessionData,
+  KillSessionResponses,
+  MassDeleteUserVarsData,
+  MassDeleteUserVarsResponses,
+  MuteUserData,
+  MuteUserResponses,
+  PauseAppData,
+  PauseAppResponses,
+  PauseAppSubscriptionData,
+  PauseAppSubscriptionResponses,
+  PauseSubscriptionData,
+  PauseSubscriptionResponses,
+  PauseUserData,
+  PauseUserResponses,
+  RemoveTeamAccountData,
+  RemoveTeamAccountResponses,
+  ResetAllUsersData,
+  ResetAllUsersResponses,
+  ResetAppHashData,
+  ResetAppHashResponses,
+  ResetUserData,
+  ResetUserPasswordData,
+  ResetUserPasswordResponses,
+  ResetUserResponses,
+  SetAppKeyNoteData,
+  SetAppKeyNoteResponses,
+  SetTeamBalanceData,
+  SetTeamBalanceResponses,
+  SetUserCooldownData,
+  SetUserCooldownResponses,
+  SetUserVarData,
+  SetUserVarResponses,
+  SubtractLicenseData,
+  SubtractLicenseResponses,
+  SubtractUserData,
+  SubtractUserResponses,
+  UnbanLicenseData,
+  UnbanLicenseResponses,
+  UnbanUserData,
+  UnbanUserResponses,
+  UnmuteUserData,
+  UnmuteUserResponses,
+  UnpauseAppData,
+  UnpauseAppResponses,
+  UnpauseAppSubscriptionData,
+  UnpauseAppSubscriptionResponses,
+  UnpauseSubscriptionData,
+  UnpauseSubscriptionResponses,
+  UnpauseUserData,
+  UnpauseUserResponses,
+  UpdateAppSettingsData,
+  UpdateAppSettingsResponses,
+  UpdateChannelData,
+  UpdateChannelResponses,
+  UpdateFileData,
+  UpdateFileResponses,
+  UpdateLicenseData,
+  UpdateLicenseResponses,
+  UpdateSubscriptionData,
+  UpdateSubscriptionResponses,
+  UpdateTeamBalanceData,
+  UpdateTeamBalanceResponses,
+  UpdateUserEmailData,
+  UpdateUserEmailResponses,
+  UpdateUserUsernameData,
+  UpdateUserUsernameResponses,
+  UpdateVarData,
+  UpdateVarResponses,
+  UploadFileData,
+  UploadFileResponses,
+  VerifyLicenseData,
+  VerifyLicenseResponses,
+  VerifyUserData,
+  VerifyUserResponses,
 } from "./types.gen";
 
 export type Options<
@@ -126,6 +358,1870 @@ export const allSeller8 = <ThrowOnError extends boolean = false>(
 ): RequestResult<unknown, unknown, ThrowOnError> =>
   (options.client ?? client).trace<unknown, unknown, ThrowOnError>({
     url: "/seller/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch license's
+ */
+export const getLicenses = <ThrowOnError extends boolean = false>(
+  options: Options<GetLicensesData, ThrowOnError>,
+): RequestResult<GetLicensesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetLicensesResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/keys/",
+    ...options,
+  });
+
+/**
+ * edit license
+ */
+export const updateLicense = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateLicenseData, ThrowOnError>,
+): RequestResult<UpdateLicenseResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).patch<
+    UpdateLicenseResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Create license's
+ */
+export const createLicense = <ThrowOnError extends boolean = false>(
+  options: Options<CreateLicenseData, ThrowOnError>,
+): RequestResult<CreateLicenseResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateLicenseResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * verify license
+ */
+export const verifyLicense = <ThrowOnError extends boolean = false>(
+  options: Options<VerifyLicenseData, ThrowOnError>,
+): RequestResult<VerifyLicenseResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<VerifyLicenseResponses, unknown, ThrowOnError>(
+    { url: "/v2/seller/keys/verify", ...options },
+  );
+
+/**
+ * license info
+ */
+export const getLicenseInfo = <ThrowOnError extends boolean = false>(
+  options: Options<GetLicenseInfoData, ThrowOnError>,
+): RequestResult<GetLicenseInfoResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetLicenseInfoResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/keys/info", ...options });
+
+/**
+ * get license note
+ */
+export const getLicenseNote = <ThrowOnError extends boolean = false>(
+  options: Options<GetLicenseNoteData, ThrowOnError>,
+): RequestResult<GetLicenseNoteResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetLicenseNoteResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/keys/note", ...options });
+
+/**
+ * extend unused license
+ */
+export const extendUnusedLicenses = <ThrowOnError extends boolean = false>(
+  options: Options<ExtendUnusedLicensesData, ThrowOnError>,
+): RequestResult<ExtendUnusedLicensesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    ExtendUnusedLicensesResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/extend/unused",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * extend all licenses
+ */
+export const extendAllLicenses = <ThrowOnError extends boolean = false>(
+  options: Options<ExtendAllLicensesData, ThrowOnError>,
+): RequestResult<ExtendAllLicensesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    ExtendAllLicensesResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/extend/all",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * delete license
+ */
+export const deleteLicense = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteLicenseData, ThrowOnError>,
+): RequestResult<DeleteLicenseResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteLicenseResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/del/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * delete all license's
+ */
+export const deleteAllLicenses = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteAllLicensesData, ThrowOnError>,
+): RequestResult<DeleteAllLicensesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteAllLicensesResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/del/all",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * delete many license's
+ */
+export const deleteManyLicenses = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteManyLicensesData, ThrowOnError>,
+): RequestResult<DeleteManyLicensesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteManyLicensesResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/del/many",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * delete unused license's
+ */
+export const deleteUnusedLicenses = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteUnusedLicensesData, ThrowOnError>,
+): RequestResult<DeleteUnusedLicensesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteUnusedLicensesResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/del/unused",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * delete used license's
+ */
+export const deleteUsedLicenses = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteUsedLicensesData, ThrowOnError>,
+): RequestResult<DeleteUsedLicensesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteUsedLicensesResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/del/used",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * subtract license
+ */
+export const subtractLicense = <ThrowOnError extends boolean = false>(
+  options: Options<SubtractLicenseData, ThrowOnError>,
+): RequestResult<SubtractLicenseResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    SubtractLicenseResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/keys/subtract",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * ban license
+ */
+export const banLicense = <ThrowOnError extends boolean = false>(
+  options: Options<BanLicenseData, ThrowOnError>,
+): RequestResult<BanLicenseResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<BanLicenseResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/keys/ban",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * unban license
+ */
+export const unbanLicense = <ThrowOnError extends boolean = false>(
+  options: Options<UnbanLicenseData, ThrowOnError>,
+): RequestResult<UnbanLicenseResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<UnbanLicenseResponses, unknown, ThrowOnError>(
+    {
+      url: "/v2/seller/keys/unban",
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        ...options.headers,
+      },
+    },
+  );
+
+/**
+ * Delete user
+ */
+export const deleteUser = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteUserData, ThrowOnError>,
+): RequestResult<DeleteUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<DeleteUserResponses, unknown, ThrowOnError>(
+    {
+      url: "/v2/seller/users/",
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        ...options.headers,
+      },
+    },
+  );
+
+/**
+ * Fetch all users
+ */
+export const getUsers = <ThrowOnError extends boolean = false>(
+  options: Options<GetUsersData, ThrowOnError>,
+): RequestResult<GetUsersResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetUsersResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/",
+    ...options,
+  });
+
+/**
+ * Create user
+ */
+export const createUser = <ThrowOnError extends boolean = false>(
+  options: Options<CreateUserData, ThrowOnError>,
+): RequestResult<CreateUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<CreateUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all usernames
+ */
+export const getUsernames = <ThrowOnError extends boolean = false>(
+  options: Options<GetUsernamesData, ThrowOnError>,
+): RequestResult<GetUsernamesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetUsernamesResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/usernames",
+    ...options,
+  });
+
+/**
+ * Delete all users
+ */
+export const deleteAllUsers = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteAllUsersData, ThrowOnError>,
+): RequestResult<DeleteAllUsersResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteAllUsersResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/all",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete expired users
+ */
+export const deleteExpiredUsers = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteExpiredUsersData, ThrowOnError>,
+): RequestResult<DeleteExpiredUsersResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteExpiredUsersResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/expired",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Assign key to user
+ */
+export const assignUserKey = <ThrowOnError extends boolean = false>(
+  options: Options<AssignUserKeyData, ThrowOnError>,
+): RequestResult<AssignUserKeyResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    AssignUserKeyResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/assign",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Reset all users
+ */
+export const resetAllUsers = <ThrowOnError extends boolean = false>(
+  options: Options<ResetAllUsersData, ThrowOnError>,
+): RequestResult<ResetAllUsersResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    ResetAllUsersResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/resetall",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Pause user
+ */
+export const pauseUser = <ThrowOnError extends boolean = false>(
+  options: Options<PauseUserData, ThrowOnError>,
+): RequestResult<PauseUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<PauseUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/pause",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Activate user
+ */
+export const activateUser = <ThrowOnError extends boolean = false>(
+  options: Options<ActivateUserData, ThrowOnError>,
+): RequestResult<ActivateUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<ActivateUserResponses, unknown, ThrowOnError>(
+    {
+      url: "/v2/seller/users/active",
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        ...options.headers,
+      },
+    },
+  );
+
+/**
+ * Update user username
+ */
+export const updateUserUsername = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateUserUsernameData, ThrowOnError>,
+): RequestResult<UpdateUserUsernameResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).put<
+    UpdateUserUsernameResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/username",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Update user email
+ */
+export const updateUserEmail = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateUserEmailData, ThrowOnError>,
+): RequestResult<UpdateUserEmailResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).put<
+    UpdateUserEmailResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/email",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Reset user password
+ */
+export const resetUserPassword = <ThrowOnError extends boolean = false>(
+  options: Options<ResetUserPasswordData, ThrowOnError>,
+): RequestResult<ResetUserPasswordResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    ResetUserPasswordResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/resetpw",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Reset user
+ */
+export const resetUser = <ThrowOnError extends boolean = false>(
+  options: Options<ResetUserData, ThrowOnError>,
+): RequestResult<ResetUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<ResetUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/resetuser",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Set user cooldown
+ */
+export const setUserCooldown = <ThrowOnError extends boolean = false>(
+  options: Options<SetUserCooldownData, ThrowOnError>,
+): RequestResult<SetUserCooldownResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    SetUserCooldownResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/cooldown",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Subtract user
+ */
+export const subtractUser = <ThrowOnError extends boolean = false>(
+  options: Options<SubtractUserData, ThrowOnError>,
+): RequestResult<SubtractUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<SubtractUserResponses, unknown, ThrowOnError>(
+    {
+      url: "/v2/seller/users/subtract",
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        ...options.headers,
+      },
+    },
+  );
+
+/**
+ * Ban user
+ */
+export const banUser = <ThrowOnError extends boolean = false>(
+  options: Options<BanUserData, ThrowOnError>,
+): RequestResult<BanUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<BanUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/ban",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Unban user
+ */
+export const unbanUser = <ThrowOnError extends boolean = false>(
+  options: Options<UnbanUserData, ThrowOnError>,
+): RequestResult<UnbanUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<UnbanUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/unban",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Unpause user
+ */
+export const unpauseUser = <ThrowOnError extends boolean = false>(
+  options: Options<UnpauseUserData, ThrowOnError>,
+): RequestResult<UnpauseUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<UnpauseUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/unpause",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Retrieve user data
+ */
+export const getUserData = <ThrowOnError extends boolean = false>(
+  options: Options<GetUserDataData, ThrowOnError>,
+): RequestResult<GetUserDataResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetUserDataResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/data",
+    ...options,
+  });
+
+/**
+ * Retrieve user subscription
+ */
+export const getUserSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<GetUserSubscriptionData, ThrowOnError>,
+): RequestResult<GetUserSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetUserSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/users/usersub", ...options });
+
+/**
+ * Verify user
+ */
+export const verifyUser = <ThrowOnError extends boolean = false>(
+  options: Options<VerifyUserData, ThrowOnError>,
+): RequestResult<VerifyUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<VerifyUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/verify",
+    ...options,
+  });
+
+/**
+ * Delete user HWID
+ */
+export const deleteUserHwid = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteUserHwidData, ThrowOnError>,
+): RequestResult<DeleteUserHwidResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteUserHwidResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/hwid/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Create user HWID
+ */
+export const createUserHwid = <ThrowOnError extends boolean = false>(
+  options: Options<CreateUserHwidData, ThrowOnError>,
+): RequestResult<CreateUserHwidResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateUserHwidResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/hwid/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * delete variable
+ */
+export const deleteUserVar = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteUserVarData, ThrowOnError>,
+): RequestResult<DeleteUserVarResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteUserVarResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/vars/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Get variable
+ */
+export const getUserVars = <ThrowOnError extends boolean = false>(
+  options: Options<GetUserVarsData, ThrowOnError>,
+): RequestResult<GetUserVarsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetUserVarsResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/vars/",
+    ...options,
+  });
+
+/**
+ * Set variable
+ */
+export const setUserVar = <ThrowOnError extends boolean = false>(
+  options: Options<SetUserVarData, ThrowOnError>,
+): RequestResult<SetUserVarResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<SetUserVarResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/users/vars/setvar",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Get all user variables
+ */
+export const getAllUserVars = <ThrowOnError extends boolean = false>(
+  options: Options<GetAllUserVarsData, ThrowOnError>,
+): RequestResult<GetAllUserVarsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetAllUserVarsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/users/vars/all", ...options });
+
+/**
+ * Mass delete user variables
+ */
+export const massDeleteUserVars = <ThrowOnError extends boolean = false>(
+  options: Options<MassDeleteUserVarsData, ThrowOnError>,
+): RequestResult<MassDeleteUserVarsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    MassDeleteUserVarsResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/users/vars/mass",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Add app hash
+ */
+export const createAppHash = <ThrowOnError extends boolean = false>(
+  options: Options<CreateAppHashData, ThrowOnError>,
+): RequestResult<CreateAppHashResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateAppHashResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/app/hash",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Get app details
+ */
+export const getAppDetails = <ThrowOnError extends boolean = false>(
+  options: Options<GetAppDetailsData, ThrowOnError>,
+): RequestResult<GetAppDetailsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetAppDetailsResponses, unknown, ThrowOnError>(
+    { url: "/v2/seller/app/details", ...options },
+  );
+
+/**
+ * Get app settings
+ */
+export const getAppSettings = <ThrowOnError extends boolean = false>(
+  options: Options<GetAppSettingsData, ThrowOnError>,
+): RequestResult<GetAppSettingsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetAppSettingsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/app/settings", ...options });
+
+/**
+ * Pause application
+ */
+export const pauseApp = <ThrowOnError extends boolean = false>(
+  options: Options<PauseAppData, ThrowOnError>,
+): RequestResult<PauseAppResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<PauseAppResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/app/pause",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Reset app hash
+ */
+export const resetAppHash = <ThrowOnError extends boolean = false>(
+  options: Options<ResetAppHashData, ThrowOnError>,
+): RequestResult<ResetAppHashResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<ResetAppHashResponses, unknown, ThrowOnError>(
+    {
+      url: "/v2/seller/app/resethash",
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        ...options.headers,
+      },
+    },
+  );
+
+/**
+ * Set key note
+ */
+export const setAppKeyNote = <ThrowOnError extends boolean = false>(
+  options: Options<SetAppKeyNoteData, ThrowOnError>,
+): RequestResult<SetAppKeyNoteResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    SetAppKeyNoteResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/app/note",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Get app stats
+ */
+export const getAppStats = <ThrowOnError extends boolean = false>(
+  options: Options<GetAppStatsData, ThrowOnError>,
+): RequestResult<GetAppStatsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetAppStatsResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/app/stats",
+    ...options,
+  });
+
+/**
+ * Unpause application
+ */
+export const unpauseApp = <ThrowOnError extends boolean = false>(
+  options: Options<UnpauseAppData, ThrowOnError>,
+): RequestResult<UnpauseAppResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<UnpauseAppResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/app/unpause",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Update app settings
+ */
+export const updateAppSettings = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateAppSettingsData, ThrowOnError>,
+): RequestResult<UpdateAppSettingsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    UpdateAppSettingsResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/app/updatesettings",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all chats
+ */
+export const getChannelChats = <ThrowOnError extends boolean = false>(
+  options: Options<GetChannelChatsData, ThrowOnError>,
+): RequestResult<GetChannelChatsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetChannelChatsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/channels/", ...options });
+
+/**
+ * Add channel
+ */
+export const createChannel = <ThrowOnError extends boolean = false>(
+  options: Options<CreateChannelData, ThrowOnError>,
+): RequestResult<CreateChannelResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateChannelResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/channels/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Clear channel messages
+ */
+export const clearChannelMessages = <ThrowOnError extends boolean = false>(
+  options: Options<ClearChannelMessagesData, ThrowOnError>,
+): RequestResult<ClearChannelMessagesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    ClearChannelMessagesResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/channels/clear",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete channel
+ */
+export const deleteChannel = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteChannelData, ThrowOnError>,
+): RequestResult<DeleteChannelResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteChannelResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/channels/delchannel",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Edit channel
+ */
+export const updateChannel = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateChannelData, ThrowOnError>,
+): RequestResult<UpdateChannelResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    UpdateChannelResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/channels/editchan",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all muted Users
+ */
+export const getMutedUsers = <ThrowOnError extends boolean = false>(
+  options: Options<GetMutedUsersData, ThrowOnError>,
+): RequestResult<GetMutedUsersResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetMutedUsersResponses, unknown, ThrowOnError>(
+    { url: "/v2/seller/channels/users/", ...options },
+  );
+
+/**
+ * Mute User
+ */
+export const muteUser = <ThrowOnError extends boolean = false>(
+  options: Options<MuteUserData, ThrowOnError>,
+): RequestResult<MuteUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<MuteUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/channels/users/mute",
+    ...options,
+  });
+
+/**
+ * UnMute User
+ */
+export const unmuteUser = <ThrowOnError extends boolean = false>(
+  options: Options<UnmuteUserData, ThrowOnError>,
+): RequestResult<UnmuteUserResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<UnmuteUserResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/channels/users/unmute",
+    ...options,
+  });
+
+/**
+ * Add variable
+ */
+export const createVar = <ThrowOnError extends boolean = false>(
+  options: Options<CreateVarData, ThrowOnError>,
+): RequestResult<CreateVarResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<CreateVarResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/vars/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete all variables
+ */
+export const deleteAllVars = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteAllVarsData, ThrowOnError>,
+): RequestResult<DeleteAllVarsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteAllVarsResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/vars/delallvars",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete variable
+ */
+export const deleteVar = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteVarData, ThrowOnError>,
+): RequestResult<DeleteVarResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<DeleteVarResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/vars/delvar",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Edit variable
+ */
+export const updateVar = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateVarData, ThrowOnError>,
+): RequestResult<UpdateVarResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<UpdateVarResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/vars/editvar",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all variables
+ */
+export const getVars = <ThrowOnError extends boolean = false>(
+  options: Options<GetVarsData, ThrowOnError>,
+): RequestResult<GetVarsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetVarsResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/vars/fetch",
+    ...options,
+  });
+
+/**
+ * Retrieve variable
+ */
+export const getVar = <ThrowOnError extends boolean = false>(
+  options: Options<GetVarData, ThrowOnError>,
+): RequestResult<GetVarResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetVarResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/vars/getvar",
+    ...options,
+  });
+
+/**
+ * Add webhook
+ */
+export const createWebhook = <ThrowOnError extends boolean = false>(
+  options: Options<CreateWebhookData, ThrowOnError>,
+): RequestResult<CreateWebhookResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateWebhookResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/webhooks/addwebhook",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete all webhooks
+ */
+export const deleteAllWebhooks = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteAllWebhooksData, ThrowOnError>,
+): RequestResult<DeleteAllWebhooksResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteAllWebhooksResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/webhooks/delallwebhooks",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all webhooks
+ */
+export const getWebhooks = <ThrowOnError extends boolean = false>(
+  options: Options<GetWebhooksData, ThrowOnError>,
+): RequestResult<GetWebhooksResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetWebhooksResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/webhooks/fetchallwebhooks",
+    ...options,
+  });
+
+/**
+ * Add button
+ */
+export const createWebloaderButton = <ThrowOnError extends boolean = false>(
+  options: Options<CreateWebloaderButtonData, ThrowOnError>,
+): RequestResult<CreateWebloaderButtonResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateWebloaderButtonResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/webloader/addbutton",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete button
+ */
+export const deleteWebloaderButton = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteWebloaderButtonData, ThrowOnError>,
+): RequestResult<DeleteWebloaderButtonResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteWebloaderButtonResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/webloader/delbutton",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all buttons
+ */
+export const getWebloaderButtons = <ThrowOnError extends boolean = false>(
+  options: Options<GetWebloaderButtonsData, ThrowOnError>,
+): RequestResult<GetWebloaderButtonsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetWebloaderButtonsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/webloader/fetchallbuttons", ...options });
+
+/**
+ * Delete file
+ */
+export const deleteFile = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteFileData, ThrowOnError>,
+): RequestResult<DeleteFileResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<DeleteFileResponses, unknown, ThrowOnError>(
+    {
+      url: "/v2/seller/files/",
+      ...options,
+      headers: {
+        "Content-Type": "application/json",
+        ...options.headers,
+      },
+    },
+  );
+
+/**
+ * Add File
+ */
+export const uploadFile = <ThrowOnError extends boolean = false>(
+  options: Options<UploadFileData, ThrowOnError>,
+): RequestResult<UploadFileResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<UploadFileResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/files/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete all files
+ */
+export const deleteAllFiles = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteAllFilesData, ThrowOnError>,
+): RequestResult<DeleteAllFilesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteAllFilesResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/files/all",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Edit file
+ */
+export const updateFile = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateFileData, ThrowOnError>,
+): RequestResult<UpdateFileResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<UpdateFileResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/files/editvar",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all variables
+ */
+export const getFiles = <ThrowOnError extends boolean = false>(
+  options: Options<GetFilesData, ThrowOnError>,
+): RequestResult<GetFilesResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetFilesResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/files/fetch",
+    ...options,
+  });
+
+/**
+ * Retrieve variable
+ */
+export const getFile = <ThrowOnError extends boolean = false>(
+  options: Options<GetFileData, ThrowOnError>,
+): RequestResult<GetFileResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetFileResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/files/getvar",
+    ...options,
+  });
+
+/**
+ * Delete all logs
+ */
+export const deleteAllLogs = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteAllLogsData, ThrowOnError>,
+): RequestResult<DeleteAllLogsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteAllLogsResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/logs/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch logs
+ */
+export const getLogs = <ThrowOnError extends boolean = false>(
+  options: Options<GetLogsData, ThrowOnError>,
+): RequestResult<GetLogsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetLogsResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/logs/",
+    ...options,
+  });
+
+/**
+ * Delete blacklist
+ */
+export const deleteBlacklist = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteBlacklistData, ThrowOnError>,
+): RequestResult<DeleteBlacklistResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteBlacklistResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/rules/blacklist/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Add blacklist
+ */
+export const getBlacklists = <ThrowOnError extends boolean = false>(
+  options?: Options<GetBlacklistsData, ThrowOnError>,
+): RequestResult<GetBlacklistsResponses, unknown, ThrowOnError> =>
+  (options?.client ?? client).get<
+    GetBlacklistsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/rules/blacklist/", ...options });
+
+/**
+ * Add blacklist
+ */
+export const createBlacklist = <ThrowOnError extends boolean = false>(
+  options: Options<CreateBlacklistData, ThrowOnError>,
+): RequestResult<CreateBlacklistResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateBlacklistResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/rules/blacklist/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete all blacklist
+ */
+export const deleteAllBlacklists = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteAllBlacklistsData, ThrowOnError>,
+): RequestResult<DeleteAllBlacklistsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteAllBlacklistsResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/rules/blacklist/all",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete whitelist
+ */
+export const deleteWhitelist = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteWhitelistData, ThrowOnError>,
+): RequestResult<DeleteWhitelistResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteWhitelistResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/ruleswhitelist/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Add whitelist
+ */
+export const createWhitelist = <ThrowOnError extends boolean = false>(
+  options: Options<CreateWhitelistData, ThrowOnError>,
+): RequestResult<CreateWhitelistResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateWhitelistResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/ruleswhitelist/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch sessions
+ */
+export const getSessions = <ThrowOnError extends boolean = false>(
+  options: Options<GetSessionsData, ThrowOnError>,
+): RequestResult<GetSessionsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<GetSessionsResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/session/",
+    ...options,
+  });
+
+/**
+ * Kill session
+ */
+export const killSession = <ThrowOnError extends boolean = false>(
+  options: Options<KillSessionData, ThrowOnError>,
+): RequestResult<KillSessionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<KillSessionResponses, unknown, ThrowOnError>({
+    url: "/v2/seller/session/kill",
+    ...options,
+  });
+
+/**
+ * Kill all sessions
+ */
+export const killAllSessions = <ThrowOnError extends boolean = false>(
+  options: Options<KillAllSessionsData, ThrowOnError>,
+): RequestResult<KillAllSessionsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    KillAllSessionsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/session/kill/all", ...options });
+
+/**
+ * Delete user subscription
+ */
+export const deleteUserSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteUserSubscriptionData, ThrowOnError>,
+): RequestResult<DeleteUserSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteUserSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all subscriptions
+ */
+export const getSubscriptions = <ThrowOnError extends boolean = false>(
+  options: Options<GetSubscriptionsData, ThrowOnError>,
+): RequestResult<GetSubscriptionsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetSubscriptionsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/subscription/", ...options });
+
+/**
+ * Edit subscription
+ */
+export const updateSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateSubscriptionData, ThrowOnError>,
+): RequestResult<UpdateSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).patch<
+    UpdateSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Create subscription
+ */
+export const createSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<CreateSubscriptionData, ThrowOnError>,
+): RequestResult<CreateSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Create subscription
+ */
+export const addSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<AddSubscriptionData, ThrowOnError>,
+): RequestResult<AddSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    AddSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/addsub",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Fetch all subscriptions
+ */
+export const fetchAllSubscriptions = <ThrowOnError extends boolean = false>(
+  options: Options<FetchAllSubscriptionsData, ThrowOnError>,
+): RequestResult<FetchAllSubscriptionsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    FetchAllSubscriptionsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/subscription/fetchallsubs", ...options });
+
+/**
+ * Get subscription count
+ */
+export const getSubscriptionCount = <ThrowOnError extends boolean = false>(
+  options: Options<GetSubscriptionCountData, ThrowOnError>,
+): RequestResult<GetSubscriptionCountResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetSubscriptionCountResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/subscription/count", ...options });
+
+/**
+ * Get subscription count
+ */
+export const countSubscriptions = <ThrowOnError extends boolean = false>(
+  options: Options<CountSubscriptionsData, ThrowOnError>,
+): RequestResult<CountSubscriptionsResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    CountSubscriptionsResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/subscription/countsubs", ...options });
+
+/**
+ * Edit subscription
+ */
+export const editSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<EditSubscriptionData, ThrowOnError>,
+): RequestResult<EditSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    EditSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/editsub",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Extend subscription
+ */
+export const extendSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<ExtendSubscriptionData, ThrowOnError>,
+): RequestResult<ExtendSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    ExtendSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/extend",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Pause subscription
+ */
+export const pauseSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<PauseSubscriptionData, ThrowOnError>,
+): RequestResult<PauseSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    PauseSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/pause",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Pause subscription
+ */
+export const pauseAppSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<PauseAppSubscriptionData, ThrowOnError>,
+): RequestResult<PauseAppSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    PauseAppSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/pausesub",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Unpause subscription
+ */
+export const unpauseSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<UnpauseSubscriptionData, ThrowOnError>,
+): RequestResult<UnpauseSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    UnpauseSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/unpause",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Unpause subscription
+ */
+export const unpauseAppSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<UnpauseAppSubscriptionData, ThrowOnError>,
+): RequestResult<UnpauseAppSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    UnpauseAppSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/unpausesub",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete user subscription
+ */
+export const delUserSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<DelUserSubscriptionData, ThrowOnError>,
+): RequestResult<DelUserSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DelUserSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/delsub",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete application subscription
+ */
+export const deleteAppSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteAppSubscriptionData, ThrowOnError>,
+): RequestResult<DeleteAppSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteAppSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/app",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete application subscription
+ */
+export const delAppSubscription = <ThrowOnError extends boolean = false>(
+  options: Options<DelAppSubscriptionData, ThrowOnError>,
+): RequestResult<DelAppSubscriptionResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DelAppSubscriptionResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/subscription/delappsub",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete team account
+ */
+export const deleteTeamAccount = <ThrowOnError extends boolean = false>(
+  options: Options<DeleteTeamAccountData, ThrowOnError>,
+): RequestResult<DeleteTeamAccountResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    DeleteTeamAccountResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/team/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Add team account
+ */
+export const createTeamAccount = <ThrowOnError extends boolean = false>(
+  options: Options<CreateTeamAccountData, ThrowOnError>,
+): RequestResult<CreateTeamAccountResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    CreateTeamAccountResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/team/",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Add team account
+ */
+export const addTeamAccount = <ThrowOnError extends boolean = false>(
+  options: Options<AddTeamAccountData, ThrowOnError>,
+): RequestResult<AddTeamAccountResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    AddTeamAccountResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/team/addAccount",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Delete team account
+ */
+export const removeTeamAccount = <ThrowOnError extends boolean = false>(
+  options: Options<RemoveTeamAccountData, ThrowOnError>,
+): RequestResult<RemoveTeamAccountResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).delete<
+    RemoveTeamAccountResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/team/deleteAccount",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Get account balance
+ */
+export const getTeamBalance = <ThrowOnError extends boolean = false>(
+  options: Options<GetTeamBalanceData, ThrowOnError>,
+): RequestResult<GetTeamBalanceResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    GetTeamBalanceResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/team/balance", ...options });
+
+/**
+ * Set account balance
+ */
+export const setTeamBalance = <ThrowOnError extends boolean = false>(
+  options: Options<SetTeamBalanceData, ThrowOnError>,
+): RequestResult<SetTeamBalanceResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    SetTeamBalanceResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/team/balance",
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+
+/**
+ * Get account balance
+ */
+export const fetchTeamBalance = <ThrowOnError extends boolean = false>(
+  options: Options<FetchTeamBalanceData, ThrowOnError>,
+): RequestResult<FetchTeamBalanceResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).get<
+    FetchTeamBalanceResponses,
+    unknown,
+    ThrowOnError
+  >({ url: "/v2/seller/team/getbalance", ...options });
+
+/**
+ * Set account balance
+ */
+export const updateTeamBalance = <ThrowOnError extends boolean = false>(
+  options: Options<UpdateTeamBalanceData, ThrowOnError>,
+): RequestResult<UpdateTeamBalanceResponses, unknown, ThrowOnError> =>
+  (options.client ?? client).post<
+    UpdateTeamBalanceResponses,
+    unknown,
+    ThrowOnError
+  >({
+    url: "/v2/seller/team/setbalance",
     ...options,
     headers: {
       "Content-Type": "application/json",
